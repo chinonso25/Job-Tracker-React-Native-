@@ -11,14 +11,14 @@ export default function Login({navigation}) {
 
   const login = async () => {
     try {
-      firebaseConfig.auth().signUp(email, password);
+      firebaseConfig.auth().signInWithEmailAndPassword(email, password);
       console.log('singed in');
       console.log(firebaseConfig.auth().currentUser);
-      navigation.navigate('Home');
       await AsyncStorage.setItem(
         'userID',
         firebaseConfig.auth().currentUser.uid,
       );
+      navigation.navigate('Home');
     } catch (error) {
       console.log(error);
     }

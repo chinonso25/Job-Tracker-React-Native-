@@ -7,7 +7,7 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 import {Dropdown} from 'react-native-material-dropdown';
 
-export default function AddJob() {
+export default function AddJob({navigation}) {
   const [user, setUser] = useState('');
   const [stage] = useState('');
   const [role, setRole] = useState('');
@@ -16,12 +16,12 @@ export default function AddJob() {
   const [salary, setSalary] = useState('');
 
   const addJob = async () => {
-    setUser(await AsyncStorage.getItem('userID'));
+    let usert = await AsyncStorage.getItem('userID');
     try {
       firebase
         .firestore()
         .collection('Users')
-        .doc(user)
+        .doc(usertc)
         .collection('Jobs')
         .add({
           Role: role,
@@ -31,6 +31,7 @@ export default function AddJob() {
           Stage: stage,
           Active: true,
         });
+      navigation.navigate('Home');
     } catch (error) {
       console.log(error);
     }
