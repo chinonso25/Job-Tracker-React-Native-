@@ -8,6 +8,7 @@ export default function Input(props) {
       value={props.text}
       onChangeText={props.setText}
       style={{margin: 10}}
+      secureTextEntry={props.secure}
     />
   );
 }

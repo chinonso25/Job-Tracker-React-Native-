@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Input from '../components/Input';
-import Button from '../components/Button';
+import {ActivityIndicator, Button} from '../components/Index';
 import AsyncStorage from '@react-native-community/async-storage';
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 import {Dropdown} from 'react-native-material-dropdown';
 import {Headline} from 'react-native-paper';
 import {Subheading} from 'react-native-paper';
-import ActivityIndicator from '../components/ActivityIndicator';
 
 export default function ViewJob({route, navigation}, props) {
   const [user, setUser] = useState('');

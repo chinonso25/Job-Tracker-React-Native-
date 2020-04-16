@@ -2,12 +2,9 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Login from './src/screens/Login';
-import Home from './src/screens/Home';
-import AddJob from './src/screens/AddJob';
-import ViewJob from './src/screens/ViewJob';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
-import Signup from './src/screens/Signup';
+
+import {Login, Home, AddJob, ViewJob, Signup} from './src/screens/Index.js';
 
 const Stack = createStackNavigator();
 

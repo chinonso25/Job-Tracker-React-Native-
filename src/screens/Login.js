@@ -60,6 +60,7 @@ export default function Login({navigation}) {
           label="Password"
           text={password}
           setText={text => setPassword(text)}
+          secure={true}
         />
       </View>
       <View style={styles.buttons}>

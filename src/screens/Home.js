@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
-import Input from '../components/Input';
-import Button from '../components/Button';
-import firebaseConfig from '../../index';
+import {StyleSheet, View} from 'react-native';
+
 import AsyncStorage from '@react-native-community/async-storage';
 import * as firebase from 'firebase';
 import 'firebase/firestore';

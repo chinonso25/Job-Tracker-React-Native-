@@ -1,8 +1,16 @@
 import * as React from 'react';
-import {ActivityIndicator, Colors} from 'react-native-paper';
+import {ActivityIndicator} from 'react-native-paper';
 
 const MyComponent = () => (
-  <ActivityIndicator animating={true} color={Colors.red800} />
+  <ActivityIndicator
+    animating={true}
+    style={{
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+    color={'#aed581'}
+  />
 );
 
 export default MyComponent;
