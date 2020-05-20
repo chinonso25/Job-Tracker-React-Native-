@@ -21,7 +21,7 @@ export default function AddJob({navigation}) {
       firebase
         .firestore()
         .collection('Users')
-        .doc(usertc)
+        .doc()
         .collection('Jobs')
         .add({
           Role: role,
